@@ -52,6 +52,7 @@ class LoginViewController: UIViewController {
         
         
         joinChannelButton.rx.tap.bind {
+            self.userNameTextField.resignFirstResponder()
             self.joinChannel()
         }
         .disposed(by: disposeBag)

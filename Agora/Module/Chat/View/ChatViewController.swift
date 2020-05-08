@@ -132,6 +132,7 @@ extension ChatViewController: UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         if pressedReturnToSendText(textField.text) {
             textField.text = nil
+            textField.resignFirstResponder()
         } else {
             view.endEditing(true)
         }
